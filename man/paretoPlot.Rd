@@ -49,7 +49,7 @@ Kevin Dunn, 2010 to 2015, \emph{Process Improvement using Data}, \url{http://lea
 % Use this for a special note you want to have pointed out. Multiple \note sections are allowed, but might be confusing to the end users.
 %\note{}
 
-\author{Kevin Dunn, <kgdunn@gmail.com>}
+\author{Kevin Dunn, <kevin.dunn@mcmaster.ca>}
 %Information about the author(s) of the Rd file. Use \email{} without extra delimiters to specify email addresses, or \url{} or \href{}{} for web pointers.
 
 %\seealso{}

@@ -26,15 +26,14 @@ Other packages that you can use immediately for experimental design are: \code{\
 \author{
 Kevin Dunn
 
-Maintainer: Kevin Dunn <kgdunn@gmail.com>
+Maintainer: Kevin Dunn <kevin.dunn@mcmaster.ca>
 }
 \references{
     Box G. E. P, Hunter, W. C. and Hunter, J. S. (2005) 
     \emph{Statistics for Experimenters, 2nd edition}.
     New York: Wiley.
     
-    Daniel, C. (1959) 
-    Use of Half Normal Plots in Interpreting Two Level Experiments.
+    Daniel, C. (1959) Use of Half Normal Plots in Interpreting Two Level Experiments.
     \emph{Technometrics}, \bold{1}, 311-340.
     
     Lenth, R.V. (1989) Quick and easy analysis of unreplicated factorials.
