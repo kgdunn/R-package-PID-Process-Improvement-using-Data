@@ -20,8 +20,7 @@ that is planned for addition.
 
 Please contact me, if you have suggestions.
 
-Other packages that you can use immediately for experimental design are: \code{\link{FrF2}} for fractional factorial experiments with 2-level factors and the base package for Designed Experiments, called 
-\code{\link{DoE.base}}.
+Other packages that you can use immediately for experimental design are: \pkg{\link[FrF2:FrF2-package]{FrF2}} for fractional factorial experiments with 2-level factors and the base package for Designed Experiments, called \pkg{\link[DoE.base:DoE.base-package]{DoE.base}}.
 }
 \author{
 Kevin Dunn
@@ -42,10 +41,10 @@ Maintainer: Kevin Dunn <kevin.dunn@mcmaster.ca>
 }
 \keyword{ array }
 \keyword{ design }
-%\seealso{
-%Related packages: 
-%\code{\link{DoE.base}}, \code{\link{BsMD}}, \code{\link{FrF2}}
-%}
+\seealso{
+Related packages: 
+  \pkg{\link[DoE.base:DoE.base-package]{DoE.base}}, \pkg{\link[BsMD:BsMD-package]{BsMD}}, \pkg{\link[FrF2:FrF2-package]{FrF2}}
+}
 \examples{
 	# 2-factor example
 	T <- c(-1, +1, -1, +1)  # centered and scaled temperature
