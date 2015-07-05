@@ -5,7 +5,7 @@ Date: 2015-07-03
 Authors@R: c(person("Kevin", "Dunn", role = c("aut", "cre"),
   	     email = "kevin.dunn@mcmaster.ca"))
 Author: Kevin Dunn [aut, cre]
-Maintainer: Kevin G. Dunn <kevin.dunn@mcmaster.ca>
+Maintainer: Kevin Dunn <kevin.dunn@mcmaster.ca>
 Depends: R (>= 2.15.0), ggplot2, stats
 Suggests: MASS
 Description: A collection of scripts and data files for the statistics text: 
