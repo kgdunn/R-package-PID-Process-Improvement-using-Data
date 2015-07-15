@@ -1,3 +1,5 @@
 importFrom("stats", "coef", "na.omit")
-import(ggplot2)
+importFrom("FrF2", "catlg")
+import(ggplot2, png)
 export("paretoPlot")
+export("tradeOffTable")

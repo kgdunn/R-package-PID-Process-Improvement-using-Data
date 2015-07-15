@@ -1,8 +1,9 @@
+% (c) Kevin Dunn, 2014-2015.
+
 \name{boilingpot}
 \alias{boilingpot}
 \docType{data}
 \title{Full factorial experiments for stove-top boiling of water.}
-\encoding{utf8}
 \description{
   The data are from boiling water in a pot under various conditions. The response variable, 
   \verb{y}, is the time taken, in minutes to reach 90 degrees Celsius. Accurately measuring 
