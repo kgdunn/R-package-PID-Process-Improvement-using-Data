@@ -6,7 +6,7 @@ Authors@R: c(person("Kevin", "Dunn", role = c("aut", "cre"),
   	     email = "kevin.dunn@mcmaster.ca"))
 Author: Kevin Dunn [aut, cre]
 Maintainer: Kevin Dunn <kevin.dunn@mcmaster.ca>
-Depends: R (>= 2.15.0), ggplot2, stats, png, FrF2
+Depends: R (>= 2.15.0), ggplot2, stats, png
 Suggests: MASS
 Description: A collection of scripts and data files for the statistics text: 
  "Process Improvement using Data". The package contains code for designed 
