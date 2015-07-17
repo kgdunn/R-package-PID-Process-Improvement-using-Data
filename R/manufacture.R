@@ -29,4 +29,3 @@ manufacture <- function(P=0.75, T=325){
   }
   return(y)
 }
-manufacture(c(400,040))

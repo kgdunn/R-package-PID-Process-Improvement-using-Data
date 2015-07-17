@@ -10,7 +10,9 @@ popcorn <- function(T=120){
   if (length(T)>1){
     stop('Cooking popcorn batches in parallel is (intentionally) not allowed.')
   }
-  
+  if (!is.finite(T)){
+    stop('Please provide finite numeric values as inputs.')
+  }
   if (T < 77) {
     stop('No popcorn was made: please cook for longer.')
   } else {
