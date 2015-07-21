@@ -56,8 +56,11 @@ return the defining relationship to assist with this.
 }
 
 % A section with references to the literature. Use \url{} or \href{}{} for web pointers.
-\references{Please see Chapter 5 of the following book:
+\references{Please see Chapter 5 of the following book: \cr
 Kevin Dunn, 2010 to 2015, \emph{Process Improvement using Data}, \url{http://learnche.org/pid}
+
+Please see this paper to gain an understanding of how these trade-off tables are constructed:\cr
+Arthur Fries and William G. Hunter, (1980) Minimum Aberration \eqn{2^{k-p}} Designs, \emph{Technometrics}, \bold{22}(4), pp. 601-608, \url{https://www.jstor.org/stable/1268198}
 }
 
 % Use this for a special note you want to have pointed out. Multiple \note sections are allowed, but might be confusing to the end users.
