@@ -11,7 +11,7 @@
 %Title information for the Rd file. This should be capitalized and not end in a period; try to limit its length to at most 65 characters for widest compatibility.
 % There must be one (and only one) \title section in a help file.
 
-\description{Creates a plot that shows a trade-off table for fractional factorial designs.}
+\description{Creates a new plot that shows a trade-off table for fractional factorial designs.}
 %A short description of what the function(s) do(es) (one paragraph, a few lines only). (If a description is too long and cannot easily be shortened, the file probably tries to document too much at once.) This is mandatory except for package-overview files.
 
 \usage{tradeOffTable()} 
@@ -45,7 +45,7 @@
 }
 
 % Description of the function's return value.
-\value{Returns a plot.}
+\value{Create a new plot displaying the trade-off table.}
 
 % A section with references to the literature. Use \url{} or \href{}{} for web pointers.
 \references{Chapter 5 of the following book: Kevin Dunn, 2010 to 2015, \emph{Process Improvement using Data}, \url{http://learnche.org/pid}
