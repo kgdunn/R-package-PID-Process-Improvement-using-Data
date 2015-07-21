@@ -10,7 +10,11 @@ contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms,'term.labels')[1],
                         xlim=c(-3.2, 3.2), 
                         ylim=c(-3.2, 3.2),
                         colour.function=terrain.colors){
-
+  
+  # Make this work to get the scipt uploaded into CRAN
+  # https://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when
+  ..level.. <- NULL# Make codetools happy
+  
   # N <- 25: resolution of surface  (higher values give smoother plots)
   # xlim <- +/- 3.2: range of the coded variables to plot on the axes
   H.grid <- seq(xlim[1], xlim[2], length=N)

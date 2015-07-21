@@ -6,7 +6,8 @@
 
 # TODO: add the defining relationship as an output. There are 2^p words in that
 #       relationship.
-tradeoff <- function(runs=16, factors=5, display=TRUE){
+# TODO: allow the user to specify the factor names in a list, and use these instead.
+tradeoff <- function(runs=8, factors=7, display=TRUE){
   
   if(as.integer(runs) != runs){
     stop('The "runs" input must be an integer.')
@@ -20,7 +21,8 @@ tradeoff <- function(runs=16, factors=5, display=TRUE){
   subset_runs <- FrF2::nruns(cat.entry) %in% runs
   subset_factors <- FrF2::nfac(cat.entry) %in% factors
   if((sum(subset_runs*subset_factors))==0){
-    stop("The number of runs and/or number of factors do not specify a fractional factorial.\n Please see tradeOffTable() for assistance.")
+    stop("The number of runs and/or number of factors do not specify a fractional factorial.\n 
+         Please type: tradeOffTable()\n         for assistance.")
   }else{
     joint <- cat.entry[as.logical(subset_runs*subset_factors)]  
   }
@@ -71,12 +73,11 @@ tradeoff <- function(runs=16, factors=5, display=TRUE){
     cat(pr.gen)
     cat(pr.alias)
   }
-  
-  return(list(resolution=resolution, 
+  invisible(list(resolution=resolution, 
               generators=gen$generators, 
               aliases=aliasing$aliased))
 }
-if(TRUE){
+if(FALSE){
   tradeoff(runs=8, factors=4)
   tradeoff(runs=8, factors=5)
   tradeoff(runs=8, factors=6)

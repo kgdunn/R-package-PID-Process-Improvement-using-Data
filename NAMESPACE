@@ -1,9 +1,12 @@
-importFrom("stats", "coef", "na.omit", "rnorm", "runif")
+importFrom("stats", "coef", "na.omit", "rnorm", "runif", "model.frame", "predict")
 importFrom("grDevices", "terrain.colors")
-#importFrom("ggplot2", "..level..")
-importFrom("FrF2", "catlg", "nfac", "nruns")
+importFrom("FrF2", "catlg", "nfac", "nruns", "FrF2")
 importFrom("DoE.base", "generators")
+importFrom("graphics", "plot.new")
+
 import(ggplot2, png)
+
+
 export("paretoPlot")
 export("tradeOffTable")
 export("popcorn")
