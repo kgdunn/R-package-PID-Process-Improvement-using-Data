@@ -3,8 +3,8 @@
 # Run this line if you don't have the "ggplot2" package installed
 # install.packages("ggPlot2", dependencies = TRUE)
 
-contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms,'term.labels')[1],
-                        ylab=attr(lsmodel$terms,'term.labels')[2], 
+contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms,"term.labels")[1],
+                        ylab=attr(lsmodel$terms,"term.labels")[2], 
                         main="Contour plot", 
                         N=25, 
                         xlim=c(-3.2, 3.2), 
@@ -33,33 +33,33 @@ contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms,'term.labels')[1],
   if(!is.character(ylab)){
     stop('The "ylab" input must be a character (string) name of a variable in the model.')
   }
-  if (!(xlab %in% valid.names)){
+  if ( !(xlab %in% valid.names) ){
     stop(paste('The variable "', toString(xlab), '" was not a variable name in the linear model.\n  Valid variable names are: ', toString(valid.names), sep=''))
   }
-  if (!(ylab %in% valid.names)){
+  if ( !(ylab %in% valid.names) ){
     stop(paste('The variable "', toString(ylab), '" was not a variable name in the linear model.\n  Valid variable names are: ', toString(valid.names), sep=''))
   }
   valid.names <- valid.names[valid.names != xlab]
   valid.names <- valid.names[valid.names != ylab]
   
-  h.points = model.frame(lsmodel)[ ,xlab]
-  v.points = model.frame(lsmodel)[ ,ylab]
+  h.points <- model.frame(lsmodel)[ ,xlab]
+  v.points <- model.frame(lsmodel)[ ,ylab]
   expt_points <- data.frame(xlab=h.points, ylab=v.points)
   colnames(grd) <- c(xlab, ylab)
   colnames(expt_points) <- c(xlab, ylab)
   grd <- rbind(grd, expt_points)
-  n.points.grid <- dim(grd)[1]
+  n_points_grid <- dim(grd)[1]
   
   # Set any unspecified variables to zero.
   # TODO: improve by allowing these variables to be specified with the ... (ellipsis)
   # input to this function
-  for(elem in valid.names){
-    grd[[elem]] = 0
+  for (elem in valid.names){
+    grd[[elem]] <- 0
   }
   
   # Predict directly from least squares model
   grd$y <- predict(lsmodel, grd)
-  binwidth = (max(grd$y) - min(grd$y))/20
+  binwidth <- (max(grd$y) - min(grd$y)) / 20
   
   p <- ggplot(data=grd[1:n,], aes_string(x=xlab, y=ylab, z="y")) + 
     stat_contour(aes(color=..level..), binwidth=binwidth) +
@@ -70,7 +70,7 @@ contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms,'term.labels')[1],
     theme(plot.title = element_text(size = rel(2))) +
     theme(axis.title = element_text(face="bold", size = rel(1.5))) +
     labs(title=main) + 
-    geom_point(data=grd[(n+1):n.points.grid,], aes_string(x=xlab, y=ylab), size=5) + 
+    geom_point(data=grd[ (n + 1):n_points_grid,], aes_string(x=xlab, y=ylab), size=5) + 
     scale_x_continuous(breaks = seq(round(xlim[1]), round(xlim[2]), by = 1)) + 
     scale_y_continuous(breaks = seq(round(ylim[1]), round(ylim[2]), by = 1))
   

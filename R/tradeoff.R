@@ -20,16 +20,16 @@ tradeoff <- function(runs=8, factors=7, display=TRUE){
   cat.entry <- FrF2::catlg
   subset_runs <- FrF2::nruns(cat.entry) %in% runs
   subset_factors <- FrF2::nfac(cat.entry) %in% factors
-  if((sum(subset_runs*subset_factors))==0){
+  if ((sum(subset_runs * subset_factors)) == 0){
     stop("The number of runs and/or number of factors do not specify a fractional factorial.\n 
          Please type: tradeOffTable()\n         for assistance.")
   }else{
-    joint <- cat.entry[as.logical(subset_runs*subset_factors)]  
+    joint <- cat.entry[as.logical(subset_runs * subset_factors)]  
   }
   joint <- joint[[1]]
   resolution <- as.character(as.roman(joint$res))
   
-  if(display){
+  if (display){
     pr.header <- paste0("With ", runs, " experiments, and ", factors, " factors:\n")
     pr.res <- paste0("  Resolution: ", resolution, "\n")
     cat(pr.header)
@@ -39,30 +39,31 @@ tradeoff <- function(runs=8, factors=7, display=TRUE){
   # where factors == k and ngen == p.
   ngen  <- factors - log2(runs)
   frf2.catalog <- FrF2(nruns=runs, nfactors=factors)
-  aliasing <- attr(frf2.catalog, 'design.info')
+  aliasing <- attr(frf2.catalog, "design.info")
   gen <- generators(frf2.catalog)
-  if(display){
-    if(ngen>1){
+  if (display){
+    if (ngen > 1){
       pr.gen <- paste0("  Generators:\n")
-      for(elem in gen$generators){
+      for (elem in gen$generators){
         pr.gen <- paste0(pr.gen, "      ", elem, "\n")
       }
     }else{
       pr.gen <- paste0("  Generator: ", gen$generators, "\n")
     }
     pr.alias <- paste0("  Aliasing (related ONLY to main effects and 2-factor interactions):\n")
-    if(resolution!='III'){       #length(aliasing$aliased$main)==0){
+    if (resolution != "III"){
+      #length(aliasing$aliased$main)==0) is an alternative test
       pr.alias <- paste0(pr.alias, "      Main effects are not aliased with 2-factor interactions.\n")
     }else{
       #pr.alias <- paste0(pr.alias, "    Main effect aliasing is:\n")
-      for(elem in aliasing$aliased$main){
+      for (elem in aliasing$aliased$main){
         pr.alias <- paste0(pr.alias, "      ", elem, "\n")
       }
     }
     
-    if(length(aliasing$aliased$fi2)>0){
+    if (length(aliasing$aliased$fi2) > 0){
       #pr.alias <- paste0(pr.alias, "    Two factor aliasing is:\n")
-      for(elem in aliasing$aliased$fi2){
+      for (elem in aliasing$aliased$fi2){
         pr.alias <- paste0(pr.alias, "      ", elem, "\n")
       }
     }

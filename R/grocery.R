@@ -9,22 +9,23 @@ grocery <- function(P=3.46, H=150){
   #
   # The outcome is: profit made per hour [dollars].
   
-  if ((length(P)>1)|(length(H)>1)){
-    stop('Running the grocery store experiments in parallel is (intentionally) not allowed.')
+  if ((length(P) > 1) | (length(H) > 1)){
+    stop("Running the grocery store experiments in parallel is (intentionally) not allowed.")
   }
   if (!all(is.finite(P)) | !all(is.finite(H))){
-    stop('All function inputs must be finite numbers.')
+    stop("All function inputs must be finite numbers.")
   } else if(P < 0){
-    stop('Please provide a positive sales price, P.')
+    stop("Please provide a positive sales price, P.")
   } else if(H < 0){
-    stop('The height of the shelving, H, must be a positive value.')
+    stop("The height of the shelving, H, must be a positive value.")
     
   } else{
   
-    aCoded = (P - 3.2)/0.2
-    bCoded = (H - 50)/100
-    y = round((18*aCoded + 12*bCoded - 7*aCoded*aCoded - 6.0*bCoded*bCoded 
-               - 8.5*aCoded*bCoded + 60)*10.0 + rnorm(1)*2)
+    a_coded <- (P - 3.2) / 0.2
+    b_coded <- (H - 50) / 100
+    y <- round((18 * a_coded + 12 * b_coded - 7 * a_coded * a_coded 
+                - 6.0 * b_coded * b_coded  - 8.5 * a_coded * b_coded + 60) * 10.0
+               + rnorm(1) * 2)
   }
   return(y)
 }
