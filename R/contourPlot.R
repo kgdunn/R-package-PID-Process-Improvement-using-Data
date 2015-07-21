@@ -23,6 +23,12 @@ contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms,'term.labels')[1],
   # column.
   valid.names <- colnames(model.frame(lsmodel))[dim(model.frame(lsmodel))[2]:2]
 
+  if(!is.character(xlab)){
+    stop('The "xlab" input must be a character (string) name of a variable in the model.')
+  }
+  if(!is.character(ylab)){
+    stop('The "ylab" input must be a character (string) name of a variable in the model.')
+  }
   if (!(xlab %in% valid.names)){
     stop(paste('The variable "', toString(xlab), '" was not a variable name in the linear model.\n  Valid variable names are: ', toString(valid.names), sep=''))
   }
@@ -67,10 +73,10 @@ contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms,'term.labels')[1],
   p          # Execute the plot (i.e. draw it!)
   return(p)  # Return the plot, so user can continue to modify it
 }
- P <- c(-1,   +1,  -1, +1)
- T <- c(-1,   -1,  +1, +1)
- y <- c(715, 713, 733, 725)
- contourPlot(lm(y~T*P))
+# P <- c(-1,   +1,  -1, +1)
+# T <- c(-1,   -1,  +1, +1)
+# y <- c(715, 713, 733, 725)
+# contourPlot(lm(y~T*P))
 # P <- c(P,   0,   0,   0,   0)
 # T <- c(T,   0,   0,   0,   0)
 # y <- c(y, 732, 733, 737, 735)
