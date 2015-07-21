@@ -1,8 +1,13 @@
 importFrom("stats", "coef", "na.omit", "rnorm", "runif")
-#importFrom("FrF2", "catlg")
+importFrom("grDevices", "terrain.colors")
+#importFrom("ggplot2", "..level..")
+
 import(ggplot2, png)
 export("paretoPlot")
 export("tradeOffTable")
 export("popcorn")
 export("grocery")
 export("manufacture")
+export("contourPlot")
+
+#importFrom("FrF2", "catlg")
