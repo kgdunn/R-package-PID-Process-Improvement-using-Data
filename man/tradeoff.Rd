@@ -69,7 +69,7 @@ Arthur Fries and William G. Hunter, (1980) Minimum Aberration \eqn{2^{k-p}} Desi
 \author{Kevin Dunn, <kevin.dunn@mcmaster.ca>}
 %Information about the author(s) of the Rd file. Use \email{} without extra delimiters to specify email addresses, or \url{} or \href{}{} for web pointers.
 
-%\seealso{}
+\seealso{\code{\link{tradeOffTable}} for a visual representation of this information.} 
 %Pointers to related R objects, using \code{\link{...}} to refer to them (\code is the correct markup for R object names, and \link produces hyperlinks in output formats which support this. See Marking text, and Cross-references).
 \examples{
 
