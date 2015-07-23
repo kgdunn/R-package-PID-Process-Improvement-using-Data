@@ -3,7 +3,7 @@ importFrom("utils", "as.roman")
 importFrom("grDevices", "terrain.colors")
 importFrom("FrF2", "catlg", "nfac", "nruns", "FrF2")
 importFrom("DoE.base", "generators")
-importFrom("graphics", "plot.new")
+importFrom("graphics", "plot.new", "plot")
 
 import(ggplot2, png)
 
