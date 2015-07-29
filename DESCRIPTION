@@ -1,6 +1,6 @@
 Package: pid
 Title: Process Improvement using Data
-Version: 0.33
+Version: 0.34
 Date: 2015-07-23
 Authors@R: c(person("Kevin", "Dunn", role = c("aut", "cre"),
   	     email = "kevin.dunn@mcmaster.ca"))
