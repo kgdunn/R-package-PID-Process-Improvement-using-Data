@@ -36,8 +36,8 @@ paretoPlot <- function(lsmodel, xlab="Effect name", ylab="Magnitude of effect",
   p <- ggplot(dat, aes(x=label, y=value, fill=group)) + 
     geom_bar(stat="identity") +
     coord_flip() + theme_bw() +
-    scale_fill_manual(values=c(negative[2], positive[2]), 
-                      labels=c(negative[1], positive[1]), 
+    scale_fill_manual(values = setNames(c(negative[2], positive[2]), 
+                               c(negative[1], positive[1])), 
                       name = legendtitle) + 
     xlab(xlab) +
     ylab(ylab) + 
@@ -61,4 +61,16 @@ if (FALSE){
   y <- c(69, 60, 24, 53) # conversion, is our response variable, y
   doe.model <- lm(y ~ T + S + T * S) # create a model with main effects, and interaction
   paretoPlot(doe.model)
+  
+  
+  # Test case: all the coefficients are the sign sign. Ensure that it is correctly plotted.
+  
+  R <- S <- F <-  c(-1, +1)
+  design <- expand.grid(R=R, S=S, F=F)
+  R <- design$R
+  S <- design$S
+  F <- design$F
+  y <- c(6.2, 6.4, 6.1, 5.5, 6.7, 6.0, 7.5, 8.8)
+  paretoPlot(lm(y ~ R*S*F))
+  paretoPlot(lm(-y ~ R*S*F))
 }
