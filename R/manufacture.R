@@ -6,9 +6,9 @@ manufacture <- function(P=0.75, T=325){
   #   P = selling price of the product, measured in dollars and cents
   #   T = throughput (production rate) of the process, measured in parts per hour
   # 
-  # Typical values for p = $0.75 and T = 325 parts per hour.
+  # Typical values for P = $0.75 and T = 325 parts per hour.
   # 
-  # The outcome is: profit made per hour [dollars].
+  # The outcome is: profit made per hour [dollars]. The aim is to maximize this value.
   
   if ((length(P) > 1) | (length(T) > 1)){
     stop("Running the manufacturing experiments in parallel is (intentionally) not allowed.")

@@ -1,7 +1,7 @@
 # (c) Kevin Dunn, 2014-2015.
 
 paretoPlot <- function(lsmodel, xlab="Effect name", ylab="Magnitude of effect",
-                       main="Pareto plot", legendtitle="Sign of coefficient",
+                       main="Pareto plot", legendtitle="Sign of coefficients",
                        negative=c("Negative", "grey"),
                        positive=c("Positive", "black")){
   # This code draws a Pareto plot; it requires the "ggplot2" library
@@ -63,8 +63,8 @@ if (FALSE){
   paretoPlot(doe.model)
   
   
-  # Test case: all the coefficients are the sign sign. Ensure that it is correctly plotted.
-  
+  # Test case: all the coefficients are the same (positive) sign. 
+  # Ensure that it is correctly plotted.  Previous bug.
   R <- S <- F <-  c(-1, +1)
   design <- expand.grid(R=R, S=S, F=F)
   R <- design$R
@@ -73,4 +73,5 @@ if (FALSE){
   y <- c(6.2, 6.4, 6.1, 5.5, 6.7, 6.0, 7.5, 8.8)
   paretoPlot(lm(y ~ R*S*F))
   paretoPlot(lm(-y ~ R*S*F))
+  
 }
