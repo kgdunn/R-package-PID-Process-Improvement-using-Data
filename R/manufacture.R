@@ -1,4 +1,4 @@
-# (c) Kevin Dunn, 2015.
+# (c) Kevin Dunn, 2018.
 
 manufacture <- function(P=0.75, T=325){
   # Simulates a manufacturing facility where there are 2 factors that affect the outcome.
@@ -8,7 +8,7 @@ manufacture <- function(P=0.75, T=325){
   # 
   # Typical values for P = $0.75 and T = 325 parts per hour.
   # 
-  # The outcome is: profit made per hour [dollars]. The aim is to maximize this value.
+  # The outcome is: profit made per hour [dollars/hour]. The aim is to maximize this.
   
   if ((length(P) > 1) | (length(T) > 1)){
     stop("Running the manufacturing experiments in parallel is (intentionally) not allowed.")
@@ -18,7 +18,7 @@ manufacture <- function(P=0.75, T=325){
   } else if(P < 0){
     stop("Please provide a positive sales price, P.")
   } else if(T < 0){
-    stop("The throughput must be a positive value.")
+    stop("The throughput (parts per hour) must be a positive value.")
     
   } else{
   

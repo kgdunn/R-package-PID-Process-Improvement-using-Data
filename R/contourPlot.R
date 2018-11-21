@@ -1,7 +1,8 @@
-# (c) Kevin Dunn, 2014 - 2015.
+# (c) Kevin Dunn, 2014 - 2018.
 
-# Run this line if you don't have the "ggplot2" package installed
-# install.packages("ggPlot2", dependencies = TRUE)
+# This code draws a contour plot; it requires the "ggplot2" library
+# install.packages("ggplot2", dependencies = TRUE)
+# require(ggplot2)
 
 contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms,"term.labels")[1],
                         ylab=attr(lsmodel$terms,"term.labels")[2], 

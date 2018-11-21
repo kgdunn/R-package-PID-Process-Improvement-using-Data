@@ -1,4 +1,4 @@
-# (c) Kevin Dunn, 2015.
+# (c) Kevin Dunn, 2018.
 
 grocery <- function(P=3.46, H=150){
   # Simulates a grocery store profit function where there are 2 factors:
@@ -7,7 +7,7 @@ grocery <- function(P=3.46, H=150){
   # 
   # Typical values for P = $3.50 and H = 150cm
   #
-  # The outcome is: profit made per hour [dollars].
+  # The outcome is: profit made per hour [dollars/hour].
   
   if ((length(P) > 1) | (length(H) > 1)){
     stop("Running the grocery store experiments in parallel is (intentionally) not allowed.")

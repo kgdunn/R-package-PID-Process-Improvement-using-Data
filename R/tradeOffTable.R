@@ -1,4 +1,4 @@
-# (c) Kevin Dunn, 2015.
+# (c) Kevin Dunn, 2018.
 
 # require(png)
 

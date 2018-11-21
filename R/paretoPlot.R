@@ -1,4 +1,4 @@
-# (c) Kevin Dunn, 2014-2015.
+# (c) Kevin Dunn, 2014-2018.
 
 paretoPlot <- function(lsmodel, xlab="Effect name", ylab="Magnitude of effect",
                        main="Pareto plot", legendtitle="Sign of coefficients",
@@ -73,5 +73,4 @@ if (FALSE){
   y <- c(6.2, 6.4, 6.1, 5.5, 6.7, 6.0, 7.5, 8.8)
   paretoPlot(lm(y ~ R*S*F))
   paretoPlot(lm(-y ~ R*S*F))
-  
 }
