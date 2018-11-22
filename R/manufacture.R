@@ -5,23 +5,23 @@ manufacture <- function(P=0.75, T=325){
   #
   #   P = selling price of the product, measured in dollars and cents
   #   T = throughput (production rate) of the process, measured in parts per hour
-  # 
+  #
   # Typical values for P = $0.75 and T = 325 parts per hour.
-  # 
+  #
   # The outcome is: profit made per hour [dollars/hour]. The aim is to maximize this.
-  
-  if ((length(P) > 1) | (length(T) > 1)){
+
+  if ( (length(P) > 1) | (length(T) > 1)) {
     stop("Running the manufacturing experiments in parallel is (intentionally) not allowed.")
   }
   if (!all(is.finite(P)) | !all(is.finite(T))){
     stop("All function inputs must be finite numbers.")
-  } else if(P < 0){
+  } else if (P < 0) {
     stop("Please provide a positive sales price, P.")
-  } else if(T < 0){
+  } else if (T < 0) {
     stop("The throughput (parts per hour) must be a positive value.")
-    
+
   } else{
-  
+
     p_coded <- (P - 1.5) / 1.0
     t_coded <- (T - 320.0) / 20.0
     y <- (18.0 * t_coded + 10 * p_coded - 5 * t_coded * p_coded - 7 * t_coded * t_coded
