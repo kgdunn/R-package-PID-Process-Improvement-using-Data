@@ -72,17 +72,18 @@ contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms, "term.labels")[1],
   binwidth <- (max(grd$y) - min(grd$y)) / 20
 
   p <- ggplot2::ggplot(data = grd[1:n, ],
-                       aes_string(x = xlab, y = ylab, z = "y")) +
-    ggplot2::stat_contour(aes(color = ..level..), binwidth = binwidth) +
+                       ggplot2::aes_string(x = xlab, y = ylab, z = "y")) +
+    ggplot2::stat_contour(ggplot2::aes(color = ..level..), binwidth = binwidth) +
     ggplot2::scale_colour_gradientn(colours = colour.function(N)) +
-    ggplot2::theme(panel.background = element_rect(fill = "white")) +
-    ggplot2::theme(panel.grid = element_blank()) +
+    ggplot2::theme(panel.background = ggplot2::element_rect(fill = "white")) +
+    ggplot2::theme(panel.grid = ggplot2::element_blank()) +
     ggplot2::theme_bw() +
-    ggplot2::theme(plot.title = element_text(size = rel(2))) +
-    ggplot2::theme(axis.title = element_text(face = "bold", size = rel(1.5))) +
+    ggplot2::theme(plot.title = ggplot2::element_text(size = ggplot2::rel(2))) +
+    ggplot2::theme(axis.title = ggplot2::element_text(face = "bold",
+                                                      size = ggplot2::rel(1.5))) +
     ggplot2::labs(title = main) +
     ggplot2::geom_point(data = grd[ (n + 1):n_points_grid, ],
-                        aes_string(x = xlab, y = ylab), size = 5) +
+                        ggplot2::aes_string(x = xlab, y = ylab), size = 5) +
     ggplot2::scale_x_continuous(breaks = seq(round(xlim[1]), round(xlim[2]), by = 1)) +
     ggplot2::scale_y_continuous(breaks = seq(round(ylim[1]), round(ylim[2]), by = 1))
 

@@ -30,7 +30,7 @@ paretoPlot <- function(lsmodel, xlab="Effect name", ylab="Magnitude of effect",
   # https://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when
   label <- value <- group <- NULL # Setting the variables to NULL first
 
-  p <- ggplot2::ggplot(dat, aes(x = label, y = value, fill = group)) +
+  p <- ggplot2::ggplot(dat, ggplot2::aes(x = label, y = value, fill = group)) +
     ggplot2::geom_bar(stat = "identity") +
     ggplot2::coord_flip() + ggplot2::theme_bw() +
     ggplot2::scale_fill_manual(values = setNames(c(negative[2], positive[2]),

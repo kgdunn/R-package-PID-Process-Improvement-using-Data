@@ -16,10 +16,15 @@ tradeoff <- function(runs=8, factors=7, display=TRUE){
     stop(paste0("Package \"FrF2\" is essential for this function to work. ",
                 "Please install it."), call. = FALSE)
   }
+  if (!requireNamespace("FrF2.catlg128", quietly = TRUE)) {
+    stop(paste0("Package \"FrF2.catlg128\" is essential for this function to work. ",
+                "Please install it."), call. = FALSE)
+  }
   if (!requireNamespace("DoE.base", quietly = TRUE)) {
     stop(paste0("Package \"DoE.base\" is essential for this function to work. ",
                 "Please install it."), call. = FALSE)
   }
+
 
   # Use FrF2 catalog to locate the experiments
   cat.entry <- FrF2::catlg
@@ -43,9 +48,9 @@ tradeoff <- function(runs=8, factors=7, display=TRUE){
   # Fractional factorial experiments have 2^{k-p} number of runs,
   # where factors == k and ngen == p.
   ngen  <- factors - log2(runs)
-  frf2.catalog <- FrF2::FrF2(nruns = runs, nfactors = factors)
-  aliasing <- attr(frf2.catalog, "design.info")
-  gen <- DoE.base::generators(frf2.catalog)
+  the.catalog <- FrF2::FrF2(nruns = runs, nfactors = factors)
+  aliasing <- attr(the.catalog, "design.info")
+  gen <- DoE.base::generators(the.catalog)
   if (display){
     if (ngen > 1){
       pr.gen <- paste0("  Generators:\n")

@@ -58,17 +58,17 @@ Arthur Fries and William G. Hunter, (1980) Minimum Aberration \eqn{2^{k-p}} Desi
 \examples{
 
 # Running 8 experiments? What are the trade-offs with 4, 5, 6, or 7 factors?
-tradeoff(runs=8, factors=4)
-tradeoff(runs=8, factors=5)
-tradeoff(runs=8, factors=6)
-tradeoff(runs=8, factors=7)
+\dontrun{tradeoff(runs=8, factors=4)}
+\dontrun{tradeoff(runs=8, factors=5)}
+\dontrun{tradeoff(runs=8, factors=6)}
+\dontrun{tradeoff(runs=8, factors=7)}
 
 # Running 16 experiments? What are the trade-offs ?
-tradeoff(runs=16, factors=5)
-tradeoff(runs=16, factors=6)
-tradeoff(runs=16, factors=7)
-tradeoff(runs=16, factors=8)
-tradeoff(runs=16, factors=9)
+\dontrun{tradeoff(runs=16, factors=5)}
+\dontrun{tradeoff(runs=16, factors=6)}
+\dontrun{tradeoff(runs=16, factors=7)}
+\dontrun{tradeoff(runs=16, factors=8)}
+\dontrun{tradeoff(runs=16, factors=9)}
 }
 
 %Examples are not only useful for documentation purposes, but also provide test code used for diagnostic checking of R code. By default, text inside \examples{} will be displayed in the output of the help page and run by example() and by R CMD check. You can use \dontrun{} for text that should only be shown, but not run, and \dontshow{} for extra commands for testing that should not be shown to users, but will be run by example(). (Previously this was called \testonly, and that is still accepted.)
