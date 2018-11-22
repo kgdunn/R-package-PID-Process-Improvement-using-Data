@@ -1,6 +1,6 @@
 # (c) Kevin Dunn, 2018.
 
-popcorn <- function(T = 120){
+popcorn <- function(T=120){
   # Simulates a stovetop popcorn cooking process where there is only 1 factor:
   #    1. cooking time, T, measured in seconds.
   # The same number of kernels are cooked each time using the same heat setting

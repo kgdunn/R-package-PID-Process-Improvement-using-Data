@@ -4,9 +4,11 @@ paretoPlot <- function(lsmodel, xlab="Effect name", ylab="Magnitude of effect",
                        main="Pareto plot", legendtitle="Sign of coefficients",
                        negative=c("Negative", "grey"),
                        positive=c("Positive", "black")){
-  # This code draws a Pareto plot; it requires the "ggplot2" library
-  # install.packages("ggplot2", dependencies = TRUE)
-  # require(ggplot2)
+
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    stop(paste0("Package \"ggplot2\" is essential for this function to work. ",
+                "Please install it."), call. = FALSE)
+  }
 
   # Extract all the coefficients, except for the intercept
   coeff.full <- coef(lsmodel)[2:length(coef(lsmodel))]
@@ -28,15 +30,15 @@ paretoPlot <- function(lsmodel, xlab="Effect name", ylab="Magnitude of effect",
   # https://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when
   label <- value <- group <- NULL # Setting the variables to NULL first
 
-  p <- ggplot(dat, aes(x = label, y = value, fill = group)) +
-    geom_bar(stat = "identity") +
-    coord_flip() + theme_bw() +
-    scale_fill_manual(values = setNames(c(negative[2], positive[2]),
+  p <- ggplot2::ggplot(dat, aes(x = label, y = value, fill = group)) +
+    ggplot2::geom_bar(stat = "identity") +
+    ggplot2::coord_flip() + ggplot2::theme_bw() +
+    ggplot2::scale_fill_manual(values = setNames(c(negative[2], positive[2]),
                                c(negative[1], positive[1])),
-                      name = legendtitle) +
-    xlab(xlab) +
-    ylab(ylab) +
-    ggtitle(main)
+                               name = legendtitle) +
+    ggplot2::xlab(xlab) +
+    ggplot2::ylab(ylab) +
+    ggplot2::ggtitle(main)
   plot(p)    # Execute the plot (i.e. draw it!)
   return(p)  # Return the plot, so user can continue to modify it
 }

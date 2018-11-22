@@ -16,6 +16,11 @@ contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms, "term.labels")[1],
   # https://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when
   ..level.. <- NULL# Make codetools happy
 
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    stop(paste0("Package \"ggplot2\" is essential for this function to work. ",
+                "Please install it."), call. = FALSE)
+  }
+
   # N <- 25: resolution of surface  (higher values give smoother plots)
   # xlim <- +/- 3.2: range of the coded variables to plot on the axes
   H.grid <- seq(xlim[1], xlim[2], length = N)
@@ -66,19 +71,20 @@ contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms, "term.labels")[1],
   grd$y <- predict(lsmodel, grd)
   binwidth <- (max(grd$y) - min(grd$y)) / 20
 
-  p <- ggplot(data = grd[1:n, ], aes_string(x = xlab, y = ylab, z = "y")) +
-    stat_contour(aes(color = ..level..), binwidth = binwidth) +
-    scale_colour_gradientn(colours = colour.function(N)) +
-    theme(panel.background = element_rect(fill = "white")) +
-    theme(panel.grid = element_blank()) +
-    theme_bw() +
-    theme(plot.title = element_text(size = rel(2))) +
-    theme(axis.title = element_text(face = "bold", size = rel(1.5))) +
-    labs(title = main) +
-    geom_point(data = grd[ (n + 1):n_points_grid, ],
-               aes_string(x = xlab, y = ylab), size = 5) +
-    scale_x_continuous(breaks = seq(round(xlim[1]), round(xlim[2]), by = 1)) +
-    scale_y_continuous(breaks = seq(round(ylim[1]), round(ylim[2]), by = 1))
+  p <- ggplot2::ggplot(data = grd[1:n, ],
+                       aes_string(x = xlab, y = ylab, z = "y")) +
+    ggplot2::stat_contour(aes(color = ..level..), binwidth = binwidth) +
+    ggplot2::scale_colour_gradientn(colours = colour.function(N)) +
+    ggplot2::theme(panel.background = element_rect(fill = "white")) +
+    ggplot2::theme(panel.grid = element_blank()) +
+    ggplot2::theme_bw() +
+    ggplot2::theme(plot.title = element_text(size = rel(2))) +
+    ggplot2::theme(axis.title = element_text(face = "bold", size = rel(1.5))) +
+    ggplot2::labs(title = main) +
+    ggplot2::geom_point(data = grd[ (n + 1):n_points_grid, ],
+                        aes_string(x = xlab, y = ylab), size = 5) +
+    ggplot2::scale_x_continuous(breaks = seq(round(xlim[1]), round(xlim[2]), by = 1)) +
+    ggplot2::scale_y_continuous(breaks = seq(round(ylim[1]), round(ylim[2]), by = 1))
 
   plot(p)    # Execute the plot (i.e. draw it!)
   return(p)  # Return the plot, so user can continue to modify it
