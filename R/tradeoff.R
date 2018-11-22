@@ -1,9 +1,6 @@
-#library(FrF2)
-
 # DONE: Ensure that there is 1 or more entries in the list; pick the first one
 # DONE: what happens if a full factorial is requested
 # DONE: what happens if a "twice" or "four times" is requested
-
 # TODO: add the defining relationship as an output. There are 2^p words in that
 #       relationship.
 # TODO: allow the user to specify the factor names in a list, and use these instead.
@@ -14,6 +11,14 @@ tradeoff <- function(runs=8, factors=7, display=TRUE){
   }
   if (as.integer(factors) != factors) {
     stop('The "factors" input must be an integer.')
+  }
+  if (!requireNamespace("FrF2", quietly = TRUE)) {
+    stop(paste0("Package \"FrF2\" is essential for this function to work. ",
+                "Please install it."), call. = FALSE)
+  }
+  if (!requireNamespace("DoE.base", quietly = TRUE)) {
+    stop(paste0("Package \"DoE.base\" is essential for this function to work. ",
+                "Please install it."), call. = FALSE)
   }
 
   # Use FrF2 catalog to locate the experiments
@@ -38,9 +43,9 @@ tradeoff <- function(runs=8, factors=7, display=TRUE){
   # Fractional factorial experiments have 2^{k-p} number of runs,
   # where factors == k and ngen == p.
   ngen  <- factors - log2(runs)
-  frf2.catalog <- FrF2(nruns = runs, nfactors = factors)
+  frf2.catalog <- FrF2::FrF2(nruns = runs, nfactors = factors)
   aliasing <- attr(frf2.catalog, "design.info")
-  gen <- generators(frf2.catalog)
+  gen <- DoE.base::generators(frf2.catalog)
   if (display){
     if (ngen > 1){
       pr.gen <- paste0("  Generators:\n")
