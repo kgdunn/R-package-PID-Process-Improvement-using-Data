@@ -1,0 +1,22 @@
+## CRAN Resubmission - pid version 0.51
+
+This is a resubmission addressing feedback from the CRAN maintainers.
+
+### Changes made:
+
+Fixed the NOTE regarding "height/width attributes should be in pixels" in the Rd files check:
+
+- File: man/tradeOffTable.Rd, line 28
+- Changed: width="100%" to style="width: 100%;"
+- Reason: HTML5 standard requires height/width attributes to be in pixels. For percentages or other units, CSS style attributes must be used instead.
+
+The package now complies with the HTML5 standard for figure attributes in documentation files.
+
+### Testing:
+
+Please run `R CMD check --as-cran pid_0.51.tar.gz` to verify that the NOTE has been resolved.
+
+Thank you for your time reviewing this package.
+
+Best regards,
+Kevin Dunn
