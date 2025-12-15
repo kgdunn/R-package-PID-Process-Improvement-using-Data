@@ -25,7 +25,7 @@
 % A detailed if possible precise description of the functionality provided, extending the basic information in the \description slot.
 \details{Displays the following trade-off table:
 
-	\if{html}{\figure{trade-off-table.png}{options: width="100\%" alt="Figure: DOE-trade-off-table.png"}}
+	\if{html}{\figure{trade-off-table.png}{options: style="width: 100%;" alt="Figure: DOE-trade-off-table.png"}}
     \if{latex}{\figure{trade-off-table.pdf}{options: width=7cm}}
 
 	The rows in the table are the number of experiments done in the fractional factorial (\eqn{n}).\cr
