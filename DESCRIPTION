@@ -1,6 +1,6 @@
 Package: pid
 Title: Process Improvement using Data
-Version: 0.55
+Version: 0.6
 Date: 2026-01-01
 Authors@R: c(person("Kevin", "Dunn", role = c("aut", "cre"),
   	     email = "kgdunn@gmail.com"))
@@ -18,3 +18,4 @@ URL: https://learnche.org/pid
 NeedsCompilation: no
 BugReports: https://bitbucket.org/kevindunn/r-pid
 RoxygenNote: 7.3.3
+Encoding: UTF-8

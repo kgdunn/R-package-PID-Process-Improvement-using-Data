@@ -4,6 +4,7 @@
 # install.packages("ggplot2", dependencies = TRUE)
 # require(ggplot2)
 
+#' @export
 contourPlot <- function(lsmodel, xlab=attr(lsmodel$terms, "term.labels")[1],
                         ylab=attr(lsmodel$terms, "term.labels")[2],
                         main="Contour plot",

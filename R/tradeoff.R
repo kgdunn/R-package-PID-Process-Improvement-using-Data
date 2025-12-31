@@ -4,6 +4,7 @@
 # TODO: add the defining relationship as an output. There are 2^p words in that
 #       relationship.
 # TODO: allow the user to specify the factor names in a list, and use these instead.
+#' @export
 tradeoff <- function(runs=8, factors=7, display=TRUE){
 
   if (as.integer(runs) != runs) {

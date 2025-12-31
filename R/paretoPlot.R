@@ -1,5 +1,6 @@
 # (c) Kevin Dunn, 2014-2026.
 
+#' @export
 paretoPlot <- function(lsmodel, xlab="Effect name", ylab="Magnitude of effect",
                        main="Pareto plot", legendtitle="Sign of coefficients",
                        negative=c("Negative", "grey"),

@@ -1,5 +1,6 @@
 # (c) Kevin Dunn, 2018-2026.
 
+#' @export
 grocery <- function(P=3.46, H=150){
   # Simulates a grocery store profit function where there are 2 factors:
   #   P = selling price of the product, measured in dollars and cents

@@ -1,5 +1,6 @@
 # (c) Kevin Dunn, 2018-2026.
 
+#' @export
 manufacture <- function(P=0.75, T=325){
   # Simulates a manufacturing facility where there are 2 factors that affect the outcome.
   #

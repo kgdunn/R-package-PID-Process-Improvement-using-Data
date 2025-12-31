@@ -5,6 +5,7 @@ if (!requireNamespace("png", quietly = TRUE)) {
               "Please install it."), call. = FALSE)
 }
 
+#' @export
 tradeOffTable <- function(){
   plot.new()
   img <- png::readPNG(system.file("trade-off-table.png", package = "pid"))
