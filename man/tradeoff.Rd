@@ -1,4 +1,4 @@
-% http://cran.r-project.org/doc/manuals/r-release/R-exts.html
+
 
 \name{tradeoff}
 \alias{tradeoff}
@@ -37,11 +37,11 @@ present in many fractional factorial designs, and may be calculated from the def
 return the defining relationship to assist with this.
 }
 
-% Description of the function's return value.
+
 \value{The function currently returns a list with 3 entries: the resolution, the generator(s) and the aliasing structure.
 }
 
-% A section with references to the literature. Use \url{} or \href{}{} for web pointers.
+
 \references{Please see Chapter 5 of the following book: \cr
 Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
 
@@ -49,8 +49,7 @@ Please see this paper to gain an understanding of how these trade-off tables are
 Arthur Fries and William G. Hunter, (1980) Minimum Aberration \eqn{2^{k-p}} Designs, \emph{Technometrics}, \bold{22}(4), pp. 601-608, \url{https://www.jstor.org/stable/1268198}
 }
 
-% Use this for a special note you want to have pointed out. Multiple \note sections are allowed, but might be confusing to the end users.
-%\note{}
+
 
 \author{Kevin Dunn, <kgdunn@gmail.com>}
 
@@ -71,15 +70,5 @@ Arthur Fries and William G. Hunter, (1980) Minimum Aberration \eqn{2^{k-p}} Desi
 \dontrun{tradeoff(runs=16, factors=9)}
 }
 
-%Examples are not only useful for documentation purposes, but also provide test code used for diagnostic checking of R code. By default, text inside \examples{} will be displayed in the output of the help page and run by example() and by R CMD check. You can use \dontrun{} for text that should only be shown, but not run, and \dontshow{} for extra commands for testing that should not be shown to users, but will be run by example(). (Previously this was called \testonly, and that is still accepted.)
-
-% Text inside \dontrun{} is 'verbatim', but the other parts of the \examples section are R-like text.
-
-%For example,
-
-%x <- runif(10)       # Shown and run.
-%\dontrun{plot(x)}    # Only shown.
-%\dontshow{log(x)}    # Only run.
-%Thus, example code not included in \dontrun must be executable! In addition, it should not use any system-specific features or require special facilities (such as Internet access or write permission to specific directories). Text included in \dontrun is indicated by comments in the processed help files: it need not be valid R code but the escapes must still be used for %, \ and unpaired braces as in other verbatim text.
 
 \concept{ design of experiments }
