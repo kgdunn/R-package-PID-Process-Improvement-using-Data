@@ -17,4 +17,4 @@ License: BSD_2_clause + file LICENSE
 URL: https://learnche.org/pid
 NeedsCompilation: no
 BugReports: https://bitbucket.org/kevindunn/r-pid
-RoxygenNote: 6.1.1
+RoxygenNote: 7.3.3
