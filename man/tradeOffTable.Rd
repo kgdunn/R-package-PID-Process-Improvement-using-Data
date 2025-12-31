@@ -16,8 +16,7 @@
 
 	Displays the following trade-off table:
 
-	\if{html}{\figure{trade-off-table.png}{options: style="width: 100%;" alt="Figure: DOE-trade-off-table.png"}}
-    \if{latex}{\figure{trade-off-table.pdf}{options: width=7cm}}
+	\figure{trade-off-table.png}{options: style="width: 900px"}
 
 	The rows in the table are the number of experiments done in the fractional factorial (\eqn{n}).\cr
 	The columns are the number of factors under investigation in the design (\eqn{k}).\cr
