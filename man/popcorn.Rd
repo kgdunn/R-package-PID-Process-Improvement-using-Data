@@ -34,7 +34,7 @@ experimentation to determine the optimum time, with the fewest number of functio
 \value{Returns the number of edible popcorn kernels. Random noise is added for some realism.}
 
 % A section with references to the literature. Use \url{} or \href{}{} for web pointers.
-\references{Please see Chapter 5 of the following book: Kevin Dunn, 2010 to 2019, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
+\references{Please see Chapter 5 of the following book: Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
 }
 
 % Use this for a special note you want to have pointed out. Multiple \note sections are allowed, but might be confusing to the end users.

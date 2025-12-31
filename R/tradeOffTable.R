@@ -1,4 +1,4 @@
-# (c) Kevin Dunn, 2018.
+# (c) Kevin Dunn, 2018-2026.
 
 if (!requireNamespace("png", quietly = TRUE)) {
   stop(paste0("Package \"png\" is essential for this function to work. ",

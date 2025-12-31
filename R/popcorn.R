@@ -1,4 +1,4 @@
-# (c) Kevin Dunn, 2018.
+# (c) Kevin Dunn, 2018-2026.
 
 popcorn <- function(T=120){
   # Simulates a stovetop popcorn cooking process where there is only 1 factor:

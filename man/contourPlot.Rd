@@ -16,14 +16,14 @@ plotted on the horizontal and vertical axes. If the model has more than two fact
 It is assumed the model is in coded units.}
 %A short description of what the function(s) do(es) (one paragraph, a few lines only). (If a description is too long and cannot easily be shortened, the file probably tries to document too much at once.) This is mandatory except for package-overview files.
 
-\usage{contourPlot(lsmodel, 
-            xlab=attr(lsmodel$terms,'term.labels')[1], 
-            ylab=attr(lsmodel$terms,'term.labels')[2], 
-            main="Contour plot", 
-            N=25, 
-            xlim=c(-3.2, 3.2), 
+\usage{contourPlot(lsmodel,
+            xlab=attr(lsmodel$terms,'term.labels')[1],
+            ylab=attr(lsmodel$terms,'term.labels')[2],
+            main="Contour plot",
+            N=25,
+            xlim=c(-3.2, 3.2),
             ylim=c(-3.2, 3.2),
-            colour.function=terrain.colors)} 
+            colour.function=terrain.colors)}
 %One or more lines showing the synopsis of the function(s) and variables documented in the file. These are set in typewriter font. This is an R-like command.
 % The usage information specified should match the function definition exactly (such that automatic checking for consistency between code and documentation is possible).
 
@@ -62,19 +62,19 @@ It is assumed the model is in coded units.}
 For example, a general design of experiments with 4 factors: A, B, C, and D can be built using\cr
 \code{lsmodel <- lm(y ~ A*B*C*D)}, and then various 2-D contour plots visualized with\cr
 \code{contourPlot(lsmodel, "A", "B")}, \code{contourPlot(lsmodel, "B", "C")}, or whichever combination of factors
-are desired. The variables \emph{not} being plotted are set at their zero (0) value. 
+are desired. The variables \emph{not} being plotted are set at their zero (0) value.
 
-Future versions of this function will allow specifying the inactive variable levels. In the interim, please see the \code{rsm} 
+Future versions of this function will allow specifying the inactive variable levels. In the interim, please see the \code{rsm}
 package (the \code{rsm::contour(...)} function) if this functionality is required.
 }
 
 % Description of the function's return value.
-\value{Returns a \code{ggplot2} object, which, by default, is shown before being returned by this function. 
+\value{Returns a \code{ggplot2} object, which, by default, is shown before being returned by this function.
 The \code{ggplot2} object may be further manipulated, if desired.}
 
 % A section with references to the literature. Use \url{} or \href{}{} for web pointers.
 \references{Please see Chapter 5 of the following book:
-Kevin Dunn, 2010 to 2019, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
+Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
 }
 
 % Use this for a special note you want to have pointed out. Multiple \note sections are allowed, but might be confusing to the end users.
@@ -94,22 +94,22 @@ T <- c(-1, +1, -1, +1)  # centered and scaled temperature
 S <- c(-1, -1, +1, +1)  # centered and scaled speed variable
 y <- c(69, 60, 64, 53)  # conversion, is our response variable, y
 doe.model <- lm(y ~ T + S + T * S)  # model with main effects, and interaction
-contourPlot(doe.model)  
+contourPlot(doe.model)
 
 # 3-factor example
 # ----------------
 data(pollutant)
-mod.full <- lm(y ~ C*T*S, data=pollutant) 
+mod.full <- lm(y ~ C*T*S, data=pollutant)
 contourPlot(mod.full, N=50)               # high resolution plot
 contourPlot(mod.full, xlab='C', ylab='S',
             main="Strong C:S interaction",
 			colour.function=rainbow)
-			
+
 # Central composite design
 P <- c(-1,   +1,  -1,  +1,     0, -1.41,     0, +1.41)
 T <- c(-1,   -1,  +1,  +1, +1.41,     0, -1.41,     0)
 y <- c(715, 713, 733, 725,   738,   717,   721,   710)
-mod.CCD <- lm(y ~ P*T + I(P^2) + I(T^2))  
+mod.CCD <- lm(y ~ P*T + I(P^2) + I(T^2))
 contourPlot(mod.CCD, 'P', 'T', xlim=c(-2.2, 2.2), ylim=c(-3,2))
 }
 

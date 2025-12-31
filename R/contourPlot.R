@@ -1,4 +1,4 @@
-# (c) Kevin Dunn, 2014 - 2018.
+# (c) Kevin Dunn, 2014-2026.
 
 # This code draws a contour plot; it requires the "ggplot2" library
 # install.packages("ggplot2", dependencies = TRUE)
