@@ -16,6 +16,6 @@ Description: A collection of scripts and data files for the statistics text:
 License: BSD_2_clause + file LICENSE
 URL: https://learnche.org/pid/
 NeedsCompilation: no
-BugReports: https://github.com/kgdunn/R-package-PID-Process-Improvement-using-Data
+BugReports: https://github.com/kgdunn/R-package-PID-Process-Improvement-using-Data/issues
 RoxygenNote: 7.3.3
 Encoding: UTF-8
