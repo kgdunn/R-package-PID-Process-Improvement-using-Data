@@ -41,7 +41,7 @@ Can you determine the best combination of conditions, using a systematic method 
 \value{Returns the hourly profit made. Random noise is added for some realism.}
 
 
-\references{Please see Chapter 5 of the following book: Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
+\references{Please see Chapter 5 of the following book: Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid/}
 }
 
 

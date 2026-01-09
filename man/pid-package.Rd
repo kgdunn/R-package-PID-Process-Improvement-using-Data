@@ -6,7 +6,7 @@ Process Improvement using Data
 }
 \description{
 This package contains functions and datasets that complement the book
-Process Improvement using Data, \url{https://learnche.org/pid}.
+Process Improvement using Data, \url{https://learnche.org/pid/}.
 
 The functions and datasets are also used in the massive open online course (MOOC) called
 "Experimentation for Improvement", hosted on Coursera, \url{https://yint.org/experiments}.

@@ -73,7 +73,7 @@ The \code{ggplot2} object may be further manipulated, if desired.}
 
 
 \references{Please see Chapter 5 of the following book:
-Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
+Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid/}
 }
 
 

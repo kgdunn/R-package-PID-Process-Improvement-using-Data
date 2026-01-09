@@ -34,7 +34,7 @@ experimentation to determine the optimum time, with the fewest number of functio
 \value{Returns the number of edible popcorn kernels. Random noise is added for some realism.}
 
 
-\references{Please see Chapter 5 of the following book: Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
+\references{Please see Chapter 5 of the following book: Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid/}
 }
 
 

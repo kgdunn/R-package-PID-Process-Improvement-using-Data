@@ -35,7 +35,7 @@
 }
 
 \references{
-	Chapter 5 of the following book: Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid}
+	Chapter 5 of the following book: Kevin Dunn, 2010 to 2026, \emph{Process Improvement using Data}, \url{https://learnche.org/pid/}
 
 	Please see this paper to gain an understanding of how these trade-off tables are constructed:\cr
 	Arthur Fries and William G. Hunter, (1980) Minimum Aberration \eqn{2^{k-p}} Designs, \emph{Technometrics}, \bold{22}(4), pp. 601-608, \url{https://www.jstor.org/stable/1268198}
