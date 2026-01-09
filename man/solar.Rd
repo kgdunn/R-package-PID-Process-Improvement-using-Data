@@ -6,7 +6,7 @@
   The data are from a solar panel simulation case study.
 
   The original source that Box, Hunter and Hunter used is
-  \url{https://www.sciencedirect.com/science/article/pii/0038092X67900515}
+  \url{https://doi.org/10.1016/0038-092X(67)90051-5}
 
   A theoretical model for a commercial system was made. A 2^4 factorial
   design was used (center point is not included in this dataset).
